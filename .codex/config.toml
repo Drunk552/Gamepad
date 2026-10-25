@@ -1,0 +1,6 @@
+# Project-level Codex configuration. This is loaded only for trusted projects.
+# Do not set model or provider here; inherit from the user's authenticated Codex setup.
+[agents]
+enabled = true
+max_concurrent_threads_per_session = 3
+default_subagent_reasoning_effort = "medium"

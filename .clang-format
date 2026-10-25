@@ -1,0 +1,13 @@
+# S3 Gamepad C 代码风格（clang-format）
+# 多 Agent 协作的统一格式基线；提交前运行:
+#   clang-format -i components/**/*.[ch] main/*.[ch]
+BasedOnStyle: LLVM
+IndentWidth: 4
+ColumnLimit: 100
+UseTab: Never
+PointerAlignment: Right
+AllowShortFunctionsOnASingleLine: None
+AllowShortIfStatementsOnASingleLine: Never
+SortIncludes: CaseSensitive
+IncludeBlocks: Preserve
+AlignConsecutiveMacros: true
