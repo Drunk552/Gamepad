@@ -19,6 +19,12 @@ Thumbs.db
 # 原始启动包 / 补充包存档（内容已并入根目录，仅作参考，不入库）
 _archive/
 
+# 项目管理与 AI 协作文件（仅本地维护，不发布到 GitHub 云端仓库）
+AGENTS.md
+docs/
+.zcode/
+.codex/
+
 # 调试产物
 *.map
 coredump/
