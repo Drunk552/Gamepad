@@ -1,5 +1,7 @@
 # 阶段规划 / 里程碑看板
 
+> 任务执行方式：按 `multi-agent-protocol.md` 派发，任务文件从 `../tasks/_TEMPLATE.md` 生成，状态流转见协议第 2 节。看板状态只能由主 Agent 依据任务 MERGED / 实测证据更新。
+
 | 阶段 | 工作 | 退出判据 | 状态 |
 |---|---|---|---|
 | M0 | USB HID 最小 Demo，1 摇杆 + A/B/Start，Windows/Steam/《双影奇境》真实测试 | 目标游戏认得设备并接受关键输入 | NOT_STARTED |

@@ -2,8 +2,8 @@
 """ESP32-S3 Gamepad 引脚分配静态验证器。
 
 用法:
-    python tools/validate_pinmap.py docs/board-pinmap-template.md
-    python tools/validate_pinmap.py docs/board-pinmap-template.md --json
+    python tools/validate_pinmap.py docs/hardware/board-pinmap.md
+    python tools/validate_pinmap.py docs/hardware/board-pinmap.md --json
 
 解析 board-pinmap Markdown 表格（功能 | 候选脚位 | 最终脚位 | 证明 | 状态），
 按 ESP32-S3 硬件规则检查每个候选/最终引脚。规则不依赖记忆断言，全部可追溯到

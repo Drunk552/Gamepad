@@ -1,6 +1,8 @@
-# 实际开发板引脚确认表（空白模板）
+# 开发板引脚确认表（候选 → 最终，逐步冻结）
 
 > 未确认原理图前 **禁止** 把候选 GPIO 写死为最终 GPIO。ESP32-S3 的具体开发板可能复用 USB、Flash/PSRAM、UART、LED、Strapping 等引脚。
+> 本表每次修改后必须跑 `python tools/validate_pinmap.py docs/hardware/board-pinmap.md`（S3 通用规则静态检查，替代不了原理图核对）。
+> 已知问题：候选 RX=GPIO3 是 strapping 引脚（JTAG 源选择），若沿用需评估摇杆电路的上电电平，建议改用 GPIO7/GPIO10。
 
 - 开发板厂商/型号：TODO
 - ESP32-S3 模组型号 / Flash / PSRAM：TODO

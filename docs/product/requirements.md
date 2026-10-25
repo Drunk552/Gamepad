@@ -1,5 +1,7 @@
 # 产品需求基线（S3 Gamepad V1.0）
 
+> 本文件是仓库内的**执行基线**；完整版产品/设计母本为 [PRD-S3-Gamepad-V1.0.docx](PRD-S3-Gamepad-V1.0.docx)（V1.0 · 2026-10-25，含背景解释、BOM、算法参数等展开内容）。两者如有出入，以本文件 + 最新 ADR 为准；需求变更走 `docs/decisions/` ADR 并同步更新本文件。
+
 ## 目标
 开发 ESP32-S3 USB 有线双摇杆游戏手柄，优先在 Windows Steam 版《双影奇境》（Split Fiction）实测。EA 官方确认 PC 本地合作支持两只控制器，或一只控制器+键鼠。Windows 能枚举 ≠ Steam 能映射 ≠ 游戏支持，三个关卡必须分别验收。
 

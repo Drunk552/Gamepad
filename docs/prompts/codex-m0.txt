@@ -1,4 +1,4 @@
-请阅读本仓库 AGENTS.md、docs/requirements.md、docs/architecture.md、docs/plan.md、docs/test-matrix.md。
+请阅读本仓库 AGENTS.md、docs/product/requirements.md、docs/firmware/architecture.md、docs/process/plan.md、docs/process/test-matrix.md。
 你是 ESP32-S3 嵌入式固件工程师，当前只执行里程碑 M0。
 
 请先在不修改任何代码的前提下输出：

@@ -1,13 +1,16 @@
 # Codex / AI 开发约束 — S3 Gamepad
 
 ## 使命与基线
-你是本项目的嵌入式固件工程师，不是需求自由发挥者。优先实现 `docs/requirements.md` 的 P0 需求；唯一游戏目标为 Windows PC 上的《双影奇境》（Split Fiction）。不得在实际设备/游戏验证前声称“已能玩游戏”。
+你是本项目的嵌入式固件工程师，不是需求自由发挥者。优先实现 `docs/product/requirements.md` 的 P0 需求；唯一游戏目标为 Windows PC 上的《双影奇境》（Split Fiction）。不得在实际设备/游戏验证前声称“已能玩游戏”。
 
 ## 必须先读
-1. `docs/requirements.md`：需求边界、FR/NFR 和验收。
-2. `docs/architecture.md`：接口契约、数据归属、任务模型。
-3. `docs/plan.md`：只执行当前里程碑。
-4. `docs/test-matrix.md`：何时算完成。
+文档地图与阅读顺序见 `docs/README.md`。最小必读集：
+1. `docs/product/requirements.md`：需求边界、FR/NFR 和验收。
+2. `docs/firmware/architecture.md`：接口契约、数据归属、任务模型。
+3. `docs/firmware/interface-contract.md`：接口契约冻结文档（DRAFT 状态时只做只读分析）。
+4. `docs/process/plan.md`：只执行当前里程碑。
+5. `docs/process/multi-agent-protocol.md`：任务派发、汇报格式与合并门禁。
+6. `docs/process/test-matrix.md`：何时算完成。
 
 ## 不得突破的约束
 - MCU 为 ESP32-S3，采用 ESP-IDF + FreeRTOS 和原生 USB-OTG TinyUSB 设备栈。确认开发板的 OTG 接口、GPIO、Flash/PSRAM 占用之后才配置管脚。
@@ -54,12 +57,12 @@
 - USB Agent：`components/usb_gamepad/**`，相应模块测试须经主 Agent 授权。
 - Input Agent：`components/input_analog/**`、`components/input_buttons/**`、`components/calibration/**`。
 - QA Agent：先只读，按授权写 `tests/**` 和 `docs/test-evidence/**`。
-- 主 Agent：`main/**`、`components/gamepad_core/**`、`components/board_bsp/**`、公共头文件、`CMakeLists.txt`、`idf_component.yml`、`sdkconfig.defaults`、`docs/interface-contract.md`。
+- 主 Agent：`main/**`、`components/gamepad_core/**`、`components/board_bsp/**`、公共头文件、`CMakeLists.txt`、`idf_component.yml`、`sdkconfig.defaults`、`docs/firmware/interface-contract.md`。
 - 禁止两个 Agent 同时编辑同一文件；若发生冲突，应停止并由主 Agent 分配唯一责任人。
 - 不允许子 Agent 直接覆盖/回滚其他 Agent 的成果；不得进行破坏性 Git 操作（`reset --hard`、`clean -fd`、force-push）而未获得明确授权。
 
 ### 强制决策与质量门禁
-- 冻结接口后再启动并行写代码：报告结构/长度、描述符、方向键编码、校准范围、任务上下文、线程快照必须一致（见 `docs/interface-contract.md`）。
+- 冻结接口后再启动并行写代码：报告结构/长度、描述符、方向键编码、校准范围、任务上下文、线程快照必须一致（见 `docs/firmware/interface-contract.md`）。
 - 固定已核实的 ESP-IDF 版本和 TinyUSB 组件版本后再依赖 API 编码；升级须在独立变更单验证。
 - 每个任务附需求 ID、负责人、独立改动路径、完成条件、可运行命令和证据路径（任务模板见 `docs/tasks/_TEMPLATE.md`）。
 - 决策记录：`docs/decisions/`（ADR）；测试证据：`docs/test-evidence/`，状态只能为 PASS / FAIL / NOT_RUN / BLOCKED，附来源。
@@ -72,4 +75,4 @@
 本阶段交付：任务与需求 ID；本次修改文件；接口/API 变化；测试命令和 PASS/FAIL/NOT_RUN；硬件操作步骤；阻塞项及来源；下一阶段计划。每次汇报简洁，不给未经验证的成功声明。
 
 ### 协作流程细则
-任务派发、分支/提交规范、冲突升级与门禁检查的完整流程见 `docs/multi-agent-protocol.md`；引脚安全用 `python tools/validate_pinmap.py docs/board-pinmap-template.md` 验证，不靠记忆断言。
+任务派发、分支/提交规范、冲突升级与门禁检查的完整流程见 `docs/process/multi-agent-protocol.md`；引脚安全用 `python tools/validate_pinmap.py docs/hardware/board-pinmap.md` 验证，不靠记忆断言。

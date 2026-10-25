@@ -20,7 +20,7 @@ description: "记录 S3 Gamepad 的硬件/Windows/Steam/游戏实测证据并更
 
 ## 3. 更新测试矩阵
 
-`docs/test-matrix.md` 对应行的 当前状态：
+`docs/process/test-matrix.md` 对应行的 当前状态：
 - `NOT_RUN` → `PASS`：仅当证据完整且通过条件满足。
 - `NOT_RUN` / `PASS` → `FAIL`：证据显示不满足通过条件；同时建缺陷 `DEF-<序号>`（下一个可用编号），按需求文档 8.2 定级 S0–S3。
 - 需要用户操作但暂缺证据 → 保持 `NOT_RUN`，把待办步骤列给用户。

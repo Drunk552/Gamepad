@@ -7,14 +7,14 @@ description: "验证 S3 Gamepad 的 GPIO 引脚分配安全性并推进引脚冻
 
 ## 1. 前提：开发板事实
 
-引脚表冻结的前提是 `docs/hardware-questions.md` 第 1–3 项已确认：开发板准确型号、模组（N8/N16、PSRAM 容量）、官方原理图或 pinout 来源、USB-C 是原生 OTG 口还是 UART 下载口。
+引脚表冻结的前提是 `docs/hardware/hardware-questions.md` 第 1–3 项已确认：开发板准确型号、模组（N8/N16、PSRAM 容量）、官方原理图或 pinout 来源、USB-C 是原生 OTG 口还是 UART 下载口。
 
 用户没提供时：向用户索要（型号/购买链接/原理图都行），**绝不能猜**。可以先用官方开发板资料做"预填分析"，但状态列必须保持 NOT_VERIFIED。
 
 ## 2. 运行验证脚本
 
 ```bash
-python tools/validate_pinmap.py docs/board-pinmap-template.md
+python tools/validate_pinmap.py docs/hardware/board-pinmap.md
 ```
 
 脚本覆盖的 ESP32-S3 规则（退出码 0=通过，1=ERROR，2=仅 WARN）：

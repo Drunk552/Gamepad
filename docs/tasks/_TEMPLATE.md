@@ -3,7 +3,7 @@
 > 从本模板复制为 `docs/tasks/<任务ID>-<短名>.md` 后填写。带 ※ 的字段为必填，缺项任务不得派发。
 
 ## 基本信息
-- 任务 ID：※（沿用 docs/plan.md 编号，如 M0-03）
+- 任务 ID：※（沿用 docs/process/plan.md 编号，如 M0-03）
 - 需求 ID：※（如 FR-001）
 - 负责角色：※（usb-engineer / input-engineer / qa-reviewer / 主 Agent）
 - 依赖任务：（前置任务 ID；无则写"无"）
@@ -36,4 +36,4 @@
 （若与其他任务发生文件冲突，记录裁决结果）
 
 ## 交付报告
-（任务完成后按 docs/multi-agent-protocol.md 第 6 节模板填写）
+（任务完成后按 docs/process/multi-agent-protocol.md 第 6 节模板填写）

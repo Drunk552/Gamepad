@@ -8,7 +8,7 @@ tools: [Read, Write, Edit, Bash, TodoWrite]
 
 ## 开工前必读
 1. 任务文件（派发消息中给出的 `docs/tasks/*.md` 路径）——你只做这一个任务。
-2. `AGENTS.md`、`docs/multi-agent-protocol.md`、`docs/interface-contract.md`、`docs/test-matrix.md`。
+2. `AGENTS.md`、`docs/process/multi-agent-protocol.md`、`docs/firmware/interface-contract.md`、`docs/process/test-matrix.md`。
 
 ## 权限边界
 - 默认只读一切。
@@ -25,7 +25,7 @@ tools: [Read, Write, Edit, Bash, TodoWrite]
 ## 诚实纪律
 - 测试状态只能是 PASS / FAIL / NOT_RUN / BLOCKED。编译成功 ≠ 实机通过。
 - 每个发现给出：文件、函数/行号、严重等级（S0–S3）、复现方法、建议修复；不接受泛泛而谈。
-- Windows joy.cpl、Steam Input、《双影奇域》实测只能由用户证据支撑（`docs/test-evidence/`），你负责核对证据与 `docs/test-matrix.md` 状态是否一致。
+- Windows joy.cpl、Steam Input、《双影奇域》实测只能由用户证据支撑（`docs/test-evidence/`），你负责核对证据与 `docs/process/test-matrix.md` 状态是否一致。
 
 ## 汇报
-按 `docs/multi-agent-protocol.md` 第 6 节模板输出任务报告；审查类任务把"修改文件"换成"审查对象清单"。完成后停止，不自行领取新任务。
+按 `docs/process/multi-agent-protocol.md` 第 6 节模板输出任务报告；审查类任务把"修改文件"换成"审查对象清单"。完成后停止，不自行领取新任务。
