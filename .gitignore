@@ -21,6 +21,7 @@ _archive/
 
 # 项目管理与 AI 协作文件（仅本地维护，不发布到 GitHub 云端仓库）
 AGENTS.md
+HANDOFF.md
 docs/
 .zcode/
 .codex/
