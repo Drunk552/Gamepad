@@ -7,3 +7,4 @@
 | ADR | 主题 | 状态 |
 |---|---|---|
 | [ADR-0001](ADR-0001-project-baseline.md) | 项目基线决策：HID 路径、多 Agent 结构、测试与构建约定 | ACCEPTED |
+| [ADR-0002](ADR-0002-interface-contract-v1.md) | 接口契约 v1.0 冻结（D1-D6 决策：13B 全量报告、按钮位序、hat 中性、快照同步、USB 状态机归属） | ACCEPTED |

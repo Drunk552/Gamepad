@@ -8,7 +8,7 @@
 二、只做规划，禁止写任何业务固件代码（main/、components/ 一行都不动）。交付以下五项：
 A. 需求覆盖检查：核对 docs/product/requirements.md 的 P0 / 非 P0，标注文档间矛盾，不得扩项。
 B. 硬件事实清单：对照 docs/hardware/hardware-questions.md 列出已确认 / 未确认项（重点：开发板准确型号、USB-OTG 端口、GPIO/ADC、供电电平），把需要我回答的问题整理成最小清单。
-C. 接口契约冻结候选：基于 docs/firmware/interface-contract.md（当前 DRAFT v0.1）给出 gamepad_state_t、HID 报告格式、按钮位映射、hat 编码、快照同步、USB 状态机的终稿建议，明确标出需要我拍板的选项。
+C. 接口契约冻结候选：基于 docs/firmware/interface-contract.md（若为 DRAFT 则给出终稿建议；若已冻结则直接遵守）给出 gamepad_state_t、HID 报告格式、按钮位映射、hat 编码、快照同步、USB 状态机的终稿建议，明确标出需要我拍板的选项。
 D. M0 任务矩阵：任务 ID、负责角色（主 Agent / usb-engineer / input-engineer / qa-reviewer）、文件所有权、依赖、可并行性、DoD、测试命令、回退方式。
 E. 风险关口：说明 Windows 枚举、Steam Input 识别、游戏实际接受输入是三个独立关卡，前两者通过不能替代游戏实测；指出任何阻碍 M0 的问题。
 

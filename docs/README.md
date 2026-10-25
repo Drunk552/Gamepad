@@ -11,7 +11,7 @@
 | **hardware/** 硬件事实 | `hardware-questions.md` | 必须由用户确认的 9 项硬件事实——**M0-01 前置** | 用户 + 主 Agent |
 | | `board-pinmap.md` | 引脚确认表（候选→最终→冻结），配套 `tools/validate_pinmap.py` | 主 Agent + input-engineer |
 | **firmware/** 固件设计 | `architecture.md` | 数据链、分层、任务模型、USB 状态机 | 所有 Agent |
-| | `interface-contract.md` | 接口契约冻结文档（`gamepad_state_t`、报告布局、按钮位）——当前 DRAFT v0.1 | 主 Agent 冻结；usb/input 遵守 |
+| | `interface-contract.md` | 接口契约冻结文档（`gamepad_state_t`、报告布局、按钮位）——**v1.0 已冻结**（2026-10-25，ADR-0002） | 主 Agent 维护变更；usb/input 遵守 |
 | **process/** 流程与验收 | `plan.md` | 里程碑看板 M0~M6 + M0 任务分解 | 主 Agent 派发依据 |
 | | `multi-agent-protocol.md` | 协作协议：任务生命周期、门禁、分支/提交规范、汇报模板 | 所有 Agent |
 | | `test-matrix.md` | 测试矩阵（10 项，证据驱动，默认 NOT_RUN） | qa-reviewer + 用户实测 |
@@ -23,7 +23,7 @@
 ## 推荐阅读顺序
 
 - **主 Agent（每次新会话）**：本文件 → `AGENTS.md` → `process/plan.md` + `tasks/` 现状 → `process/test-matrix.md` → `git log --oneline -10`。
-- **usb-engineer / input-engineer**：任务文件 → `AGENTS.md` → `firmware/interface-contract.md`（DRAFT 则只做只读分析）→ `multi-agent-protocol.md` 汇报格式。
+- **usb-engineer / input-engineer**：任务文件 → `AGENTS.md` → `firmware/interface-contract.md`（v1.0 已冻结，必须遵守）→ `multi-agent-protocol.md` 汇报格式。
 - **qa-reviewer**：任务文件 → `firmware/interface-contract.md` → `process/test-matrix.md` → `test-evidence/`。
 - **用户（你）**：`product/requirements.md`（要做什么）→ `hardware/hardware-questions.md`（要回答什么）→ 实测后把证据交给主 Agent。
 
