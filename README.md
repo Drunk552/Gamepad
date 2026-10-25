@@ -36,11 +36,12 @@
 
 ## 立即开始
 
-1. **回答 `docs/hardware/hardware-questions.md`**：开发板型号、USB-OTG 口、摇杆/扳机元件等（M0-01，一切编码的前置）。
-2. 提供 pinout 后用 `s3-pinmap` 技能填 `docs/hardware/board-pinmap.md` 并冻结引脚。
-3. 主 Agent 产出接口契约终稿（`docs/firmware/interface-contract.md`）交用户批准。
-4. 用户发出"批准 M0 实施"后，用 `s3-dispatch` 按 `docs/process/plan.md` 逐任务派发。
-5. 实测证据随时用 `s3-evidence` 记录；M0 GO/NO-GO 由游戏实测决定，通过后才进入 M1/PCB。
+1. **新开 ZCode 会话**：投喂 `docs/prompts/zcode-kickoff.txt`（主 Agent 会先交五项规划，不会直接写代码）。
+2. **回答 `docs/hardware/hardware-questions.md`**：开发板型号、USB-OTG 口、摇杆/扳机元件等（M0-01，一切编码的前置）。
+3. 提供 pinout 后用 `s3-pinmap` 技能填 `docs/hardware/board-pinmap.md` 并冻结引脚。
+4. 主 Agent 产出接口契约终稿（`docs/firmware/interface-contract.md`）交用户批准。
+5. 用户发出"批准 M0 实施"后，用 `s3-dispatch` 按 `docs/process/plan.md` 逐任务派发。
+6. 实测证据随时用 `s3-evidence` 记录；M0 GO/NO-GO 由游戏实测决定，通过后才进入 M1/PCB。
 
 ## 红线（详见 AGENTS.md）
 

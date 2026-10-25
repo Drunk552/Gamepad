@@ -15,7 +15,7 @@
 | **process/** 流程与验收 | `plan.md` | 里程碑看板 M0~M6 + M0 任务分解 | 主 Agent 派发依据 |
 | | `multi-agent-protocol.md` | 协作协议：任务生命周期、门禁、分支/提交规范、汇报模板 | 所有 Agent |
 | | `test-matrix.md` | 测试矩阵（10 项，证据驱动，默认 NOT_RUN） | qa-reviewer + 用户实测 |
-| **prompts/** AI 启动词 | `codex-m0.txt` / `multiagent-kickoff.txt` | 单/多 Agent 启动提示词存档 | 用户投喂新会话 |
+| **prompts/** AI 启动词 | `zcode-kickoff.txt`（ZCode 新会话用，**推荐**）/ `multiagent-kickoff.txt`（Codex 版）/ `codex-m0.txt`（单 Agent 版） | AI 会话启动提示词 | 用户投喂新会话 |
 | **tasks/** 工作产物 | `_TEMPLATE.md` + 任务文件 | 每任务一文件（从模板生成） | 主 Agent 创建，子 Agent 执行 |
 | **decisions/** 工作产物 | `README.md` + ADR-* | 架构/技术决策记录 | 主 Agent 维护 |
 | **test-evidence/** 工作产物 | `<测试ID>/<日期>-<描述>` | 实测证据归档，test-matrix 状态翻转的唯一依据 | 用户产出，qa-reviewer 核对 |
